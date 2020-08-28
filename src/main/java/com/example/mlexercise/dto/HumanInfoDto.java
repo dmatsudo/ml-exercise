@@ -1,19 +1,20 @@
 package com.example.mlexercise.dto;
 
-import java.util.List;
+import javax.validation.constraints.NotEmpty;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class HumanInfoDto {
 
-	private final List<String> dna;
+	@NotEmpty(message = "El ADN no puede estar vacio.")
+	private final String[] dna;
 
-	public HumanInfoDto(@JsonProperty("dna") List<String> dna) {
+	public HumanInfoDto(@JsonProperty("dna") String[] dna) {
 		super();
 		this.dna = dna;
 	}
 
-	public List<String> getDna() {
+	public String[] getDna() {
 		return dna;
 	}
 	

@@ -1,17 +1,15 @@
 package com.example.mlexercise.model;
 
-import java.util.List;
-
 public class HumanInfo {
 
-	private final List<String> dna;
+	private final String[] dna;
 
-	public HumanInfo(List<String> dna) {
+	public HumanInfo(String[] dna) {
 		super();
 		this.dna = dna;
 	}
 
-	public List<String> getDna() {
+	public String[] getDna() {
 		return dna;
 	}
 	

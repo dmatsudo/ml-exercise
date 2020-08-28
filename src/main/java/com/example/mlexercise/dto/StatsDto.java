@@ -28,7 +28,7 @@ public class StatsDto {
 	public double getRatio() {
 		double ratio = 0;
 		try {
-			ratio = countMutantDna / (countMutantDna + countHumanDna);
+			ratio = ((double) countMutantDna) / (countMutantDna + countHumanDna);
 		} catch (Exception e) {
 			// No hacemos nada, dejamos que el ratio sea 0 (este sería el caso en que ambos contadores esten en 0)
 		}
