@@ -25,11 +25,6 @@ public class MutantController {
 	@Autowired
 	private HumanService humanService;
 	
-	@RequestMapping(value = "/test")
-	public String test() {
-		return "Mutant test";
-	}
-
 	@RequestMapping(value = "/mutant", method = RequestMethod.POST)
 	@ResponseBody
 	public ResponseEntity<HttpStatus> mutant(@Valid @RequestBody HumanInfoDto humanInfoDto) {
@@ -49,4 +44,5 @@ public class MutantController {
 		Stats stats = humanService.getStats();
 		return new StatsDto(stats.getCountMutantDna(), stats.getCountHumanDna());
 	}
+	
 }
