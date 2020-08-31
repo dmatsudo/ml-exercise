@@ -68,6 +68,26 @@ public class HumanServiceImplTest {
     }
     
     @Test
+    public void whenMutantWithVerticalBackDiagonalSeq_thenProcessHumanInfoShouldBeTrue() throws Exception {
+    	String[] dna = {"TTGCGA","CACTGC","TCATGT","CGAAGG","TCCCTA","TCACTG"};
+    	HumanInfo humanInfo = new HumanInfo(dna);
+    	
+    	boolean isMutant = humanService.processHumanInfo(humanInfo);
+    	
+    	Assert.assertTrue(isMutant);
+    }
+    
+    @Test
+    public void whenMutantWithHorizontalSeqIncludingLastColumn_thenProcessHumanInfoShouldBeFalse() throws Exception {
+    	String[] dna = {"TTGCGA","CAGTGC","TCATGT","CGAAGG","TTCCCC","TCACTG"};
+    	HumanInfo humanInfo = new HumanInfo(dna);
+    	
+    	boolean isMutant = humanService.processHumanInfo(humanInfo);
+    	
+    	Assert.assertTrue(isMutant);
+    }
+    
+    @Test
     public void whenHuman_thenProcessHumanInfoShouldBeFalse() throws Exception {
     	String[] dna = {"ATGCAA","CCGTGC","TTATGT","AGAAGG","GCCCTA","TCACTG"};
     	HumanInfo humanInfo = new HumanInfo(dna);

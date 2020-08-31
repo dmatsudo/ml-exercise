@@ -33,7 +33,7 @@ public class MutantController {
 					new ResponseEntity<HttpStatus>(HttpStatus.OK) :
 					new ResponseEntity<HttpStatus>(HttpStatus.FORBIDDEN);
 		} catch (InvalidDNAException e) {
-			// If the received parameter is not valid we fail with Bad Request
+			// Si el parametro recibido no es valido retornamos Bad Request
 			return new ResponseEntity<HttpStatus>(HttpStatus.BAD_REQUEST);
 		}
 	}

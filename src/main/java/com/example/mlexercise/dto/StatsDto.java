@@ -26,13 +26,10 @@ public class StatsDto {
 
 	@JsonProperty("ratio")
 	public double getRatio() {
-		double ratio = 0;
-		try {
-			ratio = ((double) countMutantDna) / (countMutantDna + countHumanDna);
-		} catch (Exception e) {
-			// No hacemos nada, dejamos que el ratio sea 0 (este sería el caso en que ambos contadores esten en 0)
-		}
-		return ratio;
+		double ratio = ((double) countMutantDna) / (countMutantDna + countHumanDna);
+
+		// Si la division fue por 0 retornamos 0
+		return Double.isFinite(ratio) ? ratio : 0;
 	}
 
 	

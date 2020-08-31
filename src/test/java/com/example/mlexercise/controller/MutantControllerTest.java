@@ -139,7 +139,7 @@ public class MutantControllerTest {
 		
 		Assert.assertEquals(0, map.get("count_mutant_dna"));
 		Assert.assertEquals(0, map.get("count_human_dna"));
-		Assert.assertEquals(0, map.get("ratio"));
+		Assert.assertEquals(0.0, map.get("ratio"));
 	}
 	
 }
