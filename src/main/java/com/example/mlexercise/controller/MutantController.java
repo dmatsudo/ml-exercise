@@ -8,7 +8,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.mlexercise.dto.HumanInfoDto;
@@ -26,7 +25,6 @@ public class MutantController {
 	private HumanService humanService;
 	
 	@RequestMapping(value = "/mutant", method = RequestMethod.POST)
-	@ResponseBody
 	public ResponseEntity<HttpStatus> mutant(@Valid @RequestBody HumanInfoDto humanInfoDto) {
 		try {
 			return humanService.processHumanInfo(new HumanInfo(humanInfoDto.getDna())) ?
@@ -39,7 +37,6 @@ public class MutantController {
 	}
 
 	@RequestMapping(value = "/stats", method = RequestMethod.GET)
-	@ResponseBody
 	public StatsDto stats() {
 		Stats stats = humanService.getStats();
 		return new StatsDto(stats.getCountMutantDna(), stats.getCountHumanDna());

@@ -13,12 +13,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @Repository("humanInfoDaoMySqlImpl")
 public class HumanInfoDaoMySqlImpl implements HumanInfoDao {
 
-    private final JdbcTemplate jdbcTemplate;
-
-    @Autowired
-    public HumanInfoDaoMySqlImpl(JdbcTemplate jdbcTemplate) {
-        this.jdbcTemplate = jdbcTemplate;
-    }
+	@Autowired
+    private JdbcTemplate jdbcTemplate;
 
     @Override
     public int insertHumanInfo(HumanInfo humanInfo) {

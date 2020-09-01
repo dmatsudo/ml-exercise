@@ -28,8 +28,8 @@ public class StatsDto {
 	public double getRatio() {
 		double ratio = ((double) countMutantDna) / (countMutantDna + countHumanDna);
 
-		// Si la division fue por 0 retornamos 0
-		return Double.isFinite(ratio) ? ratio : 0;
+		// Si la division fue por 0 retornamos 0, si la division fue ok, formateamos a 2 decimales
+		return Double.isFinite(ratio) ? Math.round(ratio * 100.0) / 100.0 : 0;
 	}
 
 	

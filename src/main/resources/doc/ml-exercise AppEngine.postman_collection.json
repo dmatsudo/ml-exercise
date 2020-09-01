@@ -1,0 +1,213 @@
+{
+	"info": {
+		"_postman_id": "a782a513-a6c2-4613-a8b2-60b9d531134b",
+		"name": "ml-exercise AppEngine",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "mutant",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dna\": [\"ATGCGA\",\"CAGTGC\",\"TTATGT\",\"AGAAGG\",\"CCCCTA\",\"TCACTG\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ml-exercise-287611.rj.r.appspot.com/ml-exercise/api/mutant",
+					"protocol": "http",
+					"host": [
+						"ml-exercise-287611",
+						"rj",
+						"r",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"ml-exercise",
+						"api",
+						"mutant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mutant_with_human",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dna\": [\"ATGCGA\",\"CCGTAC\",\"TTATGT\",\"AGAAGG\",\"ACCCTA\",\"TCACTG\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ml-exercise-287611.rj.r.appspot.com/ml-exercise/api/mutant",
+					"protocol": "http",
+					"host": [
+						"ml-exercise-287611",
+						"rj",
+						"r",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"ml-exercise",
+						"api",
+						"mutant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mutant_with_invalid_dna_character",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dna\": [\"ATGCGA\",\"CCGTAC\",\"XXATGT\",\"AGAAGG\",\"ACCCTA\",\"TCACTG\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ml-exercise-287611.rj.r.appspot.com/ml-exercise/api/mutant",
+					"protocol": "http",
+					"host": [
+						"ml-exercise-287611",
+						"rj",
+						"r",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"ml-exercise",
+						"api",
+						"mutant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mutant_with_invalid_dna_format",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dna\": [\"ATGCGA\",\"CCGTACXXXX\",\"XXATGT\",\"AGAAGG\",\"ACCCTA\",\"TCACTG\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/ml-exercise/api/mutanthttp://ml-exercise-287611.rj.r.appspot.com/ml-exercise/api/mutant",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ml-exercise",
+						"api",
+						"mutanthttp:",
+						"",
+						"ml-exercise-287611.rj.r.appspot.com",
+						"ml-exercise",
+						"api",
+						"mutant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mutant_with_empty_dna",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dna\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ml-exercise-287611.rj.r.appspot.com/ml-exercise/api/mutant",
+					"protocol": "http",
+					"host": [
+						"ml-exercise-287611",
+						"rj",
+						"r",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"ml-exercise",
+						"api",
+						"mutant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "stats",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/ml-exercise/api/stats",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ml-exercise",
+						"api",
+						"stats"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
