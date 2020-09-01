@@ -18,12 +18,12 @@ A continuación se detallan definiciones que se asumieron a partir del enunciado
 La aplicación se desarrolló en una arquitectura de tres capas (Controller, Service, DAO), usando Spring como inyector de dependencias.
 En cuanto a la base de datos el modelo tiene dos tablas: *human_info* con sólo una columna DNA y *human_info_stats* que contiene la información requerida por el servicio stats.
 
-La lógica para determinar si un ADN es mutante está implementada en el siguiente método de la clase HumanService (se modificó la interface para retornar una checked exception para fallas de validación):
+La lógica para determinar si un ADN es mutante está implementada en el siguiente método de la clase HumanServiceImpl (se modificó la interface para retornar una checked exception para fallas de validación):
 ```
 boolean processHumanInfo(HumanInfo humanInfo) throws InvalidDNAException
 ```
 Para intentar optimizar los tiempos de ejecución del algoritmo se hace una única recorrida de la matriz para encontrar secuencias. 
-En cada posición se evalúa el comienzo de secuencias en todos los sentidos posibles (horizontal, vertical, diagonales). La evaluación sólo se realiza si tiene sentido, por ejemplo: no se evalúa horizontalmente la posición (0, 3) en un ADN de 6x6 (una secuencia horizontal no puede tener una longitud mayor a 3 para esa posición).
+En cada posición se evalúa el comienzo de secuencias en todas las direcciones posibles (horizontal, vertical, diagonales). La evaluación sólo se realiza si tiene sentido, por ejemplo: no se evalúa horizontalmente la posición (0, 3) en un ADN de 6x6 (una secuencia horizontal no puede tener una longitud mayor a 3 para esa posición).
 
 Para cada dirección se decidió tener cuatro métodos por separado (`checkHorizontalSeq`, `checkVerticalSeq`, `checkDiagonalSeq`, `checkBackDiagonalSeq`) en lugar de refactorizar para tener un único método con la idea de tener un código más simple (aunque más extenso).
 
