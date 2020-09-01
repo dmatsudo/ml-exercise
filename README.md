@@ -28,8 +28,9 @@ Para cada dirección se decidió tener cuatro métodos por separado (`checkHoriz
 
 ## Instrucciones de ejecución
 Para ejectuar servicio **mutant** ejecutar una llamada POST al siguiente endpoint:
+```
 https://ml-exercise-287611.rj.r.appspot.com/ml-exercise/api/mutant
-
+```
 Parámetros:
 - dna: array de Strings que representan cada fila de una tablade (NxN) con la secuencia del ADN.
 
@@ -39,8 +40,9 @@ Retorna:
 - HTTP 400-Bad Request: si el ADN no es válido
 
 Para ejecutar servicio **stats** realizar un request HTTP GET al siguente endpoint:
+```
 https://ml-exercise-287611.rj.r.appspot.com/ml-exercise/api/stats
-
+```
 Como referencia puede utilizarse la siguiente [Postman Collection](https://github.com/dmatsudo/ml-exercise/blob/master/src/main/resources/doc/ml-exercise%20AppEngine.postman_collection.json).
 
 ## Posibles mejoras
