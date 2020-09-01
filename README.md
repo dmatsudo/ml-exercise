@@ -11,6 +11,7 @@ A continuación se detallan definiciones que se asumieron a partir del enunciado
    - Los ADNs son representados por una matriz cuadrada (NxN)
    - Las letras de un ADN sólo pueden ser sólo mayúsculas (A, T, C, G)
    - Un ADN no puede ser vacío.
+   
    En caso de un request con un ADN que no cumpla con las validaciones se retorna un HTTP 400 Bad Request
 
 ## Descripción técnica
