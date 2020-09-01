@@ -3,11 +3,11 @@
 ## Introducción
 Este proyecto Java-Springboot implementa una solución para el ejercicio [Mutantes](https://github.com/dmatsudo/ml-exercise/blob/master/src/main/resources/doc/Examen%20Mercadolibre%20%20-%20Mutantes.pdf) utilizando Google App Engine para su despliegue.
 
-## Definiciones
-A continuación se detallan definiciones que se asumieron por no estar especificadas en el docuemento Mutantes.pdf:
+## Supuestos
+A continuación se detallan definiciones que se asumieron a partir del enunciado del ejercicio:
 1. Cada posición (letra) del ADN puede ser reutilizada en diferentes secuencias. Se asume que dos secuencias son diferentes si tienen al menos una posición que no coincida.
-2. Las secuencias para identificar mutantes son de cuatro letras iguales y pueden ser horizontal (-), vertical (|), oblicua hacia la derecha (\) u oblicua hacia la izquierda (/).
-3. Validaciones (algunas definidas en enunciado de ejercicio):
+2. Las secuencias para identificar mutantes son de cuatro letras iguales y pueden ser horizontal (-), vertical (|), oblicua hacia la derecha (\\) u oblicua hacia la izquierda (/).
+3. Validaciones (algunas ya definidas en el enunciado):
    - Los ADNs son representados por una matriz cuadrada (NxN)
    - Las letras de un ADN sólo pueden ser sólo mayúsculas (A, T, C, G)
    - Un ADN no puede ser vacío.
@@ -32,6 +32,7 @@ https://ml-exercise-287611.rj.r.appspot.com/ml-exercise/api/mutant
 
 Parámetros:
 - dna: array de Strings que representan cada fila de una tablade (NxN) con la secuencia del ADN.
+
 Retorna:
 - HTTP 200-OK: si el ADN corresponde a un mutante
 - HTTP 403-Forbidden: si el ADN no corresponde a un mutante
