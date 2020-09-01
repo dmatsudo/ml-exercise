@@ -78,7 +78,17 @@ public class HumanServiceImplTest {
     }
     
     @Test
-    public void whenMutantWithHorizontalSeqIncludingLastColumn_thenProcessHumanInfoShouldBeFalse() throws Exception {
+    public void whenMutant10columnDna_thenProcessHumanInfoShouldBeTrue() throws Exception {
+    	String[] dna = {"ATGCGATGTC","CAGTTCCAGT","TTATGTGGAT","AGAAGGTTCC", "TCACTGAGGT", "ATGCGATGTC", "CAGTTCCAGT", "ATGCGATGTC","TCACTGTTGA", "ATGGCCCCTA"};
+    	HumanInfo humanInfo = new HumanInfo(dna);
+    	
+    	boolean isMutant = humanService.processHumanInfo(humanInfo);
+    	
+    	Assert.assertTrue(isMutant);
+    }
+    
+    @Test
+    public void whenMutantWithHorizontalSeqIncludingLastColumn_thenProcessHumanInfoShouldBeTrue() throws Exception {
     	String[] dna = {"TTGCGA","CAGTGC","TCATGT","CGAAGG","TTCCCC","TCACTG"};
     	HumanInfo humanInfo = new HumanInfo(dna);
     	
@@ -95,6 +105,16 @@ public class HumanServiceImplTest {
     	boolean isMutant = humanService.processHumanInfo(humanInfo);
     	
     	Assert.assertFalse(isMutant);
+    }
+    
+    @Test
+    public void whenHuman10columnDna_thenProcessHumanInfoShouldBeFalse() throws Exception {
+    	String[] dna = {"ATGCGATGTC","CCGTTCCAGT","TTATGTGGAT","AGAAGGTTCC", "TCACTGAGGT", "ATGCGATGTC", "CAGTTCCAGT", "ATGCGATGTC","TCACTGTTGA", "ATGGCCCCTA"};
+    	HumanInfo humanInfo = new HumanInfo(dna);
+    	
+    	boolean isMutant = humanService.processHumanInfo(humanInfo);
+    	
+    	Assert.assertTrue(isMutant);
     }
     
     @Test(expected = InvalidDNAException.class)

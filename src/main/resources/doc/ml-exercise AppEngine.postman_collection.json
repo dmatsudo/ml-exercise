@@ -131,18 +131,16 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/ml-exercise/api/mutanthttp://ml-exercise-287611.rj.r.appspot.com/ml-exercise/api/mutant",
+					"raw": "http://ml-exercise-287611.rj.r.appspot.com/ml-exercise/api/mutant",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"ml-exercise-287611",
+						"rj",
+						"r",
+						"appspot",
+						"com"
 					],
-					"port": "8080",
 					"path": [
-						"ml-exercise",
-						"api",
-						"mutanthttp:",
-						"",
-						"ml-exercise-287611.rj.r.appspot.com",
 						"ml-exercise",
 						"api",
 						"mutant"
@@ -193,12 +191,15 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/ml-exercise/api/stats",
-					"protocol": "http",
+					"raw": "https://ml-exercise-287611.rj.r.appspot.com/ml-exercise/api/stats",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"ml-exercise-287611",
+						"rj",
+						"r",
+						"appspot",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"ml-exercise",
 						"api",

@@ -41,4 +41,4 @@ Para ejecutar servicio **stats** realizar un request HTTP GET al siguente endpoi
 https://ml-exercise-287611.rj.r.appspot.com/ml-exercise/api/stats
 
 ## Posibles mejoras
-Para la persistencia se utilizó una base de datos MySQL. Teniendo en cuenta las fluctuaciones agresivas de tráfico se podría analizar el uso de una base de datos NoSQL (Bigtable). Se dejó preparada la arquitectura para implementar otro DAO y se comenzó el análisis pero por falta de tiempo no se llegó a desarrollar.
+Para la persistencia se utilizó una base de datos MySQL. Teniendo en cuenta las fluctuaciones agresivas de tráfico se podría analizar el uso de una base de datos NoSQL (Bigtable). Se dejó preparada la arquitectura para implementar otro DAO y se comenzó el análisis pero no se llegó a desarrollar.
