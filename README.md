@@ -47,4 +47,4 @@ https://ml-exercise-287611.rj.r.appspot.com/ml-exercise/api/stats
 Como referencia puede utilizarse la siguiente [Postman Collection](https://github.com/dmatsudo/ml-exercise/blob/master/src/main/resources/doc/ml-exercise%20AppEngine.postman_collection.json).
 
 ## Posibles mejoras
-Para la persistencia se utilizó una base de datos MySQL. Teniendo en cuenta las fluctuaciones agresivas de tráfico tal vez sea mejor el uso de una base de datos NoSQL (Bigtable). Se dejó preparada la arquitectura para implementar otro DAO y se comenzó el análisis pero no se llegó a desarrollar.
+Para la persistencia se usó una base de datos MySQL. Teniendo en cuenta las fluctuaciones agresivas de tráfico tal vez sea mejor el uso de una base de datos NoSQL (Bigtable). Se dejó preparada la arquitectura para implementar otro DAO y se comenzó el análisis pero no se llegó a desarrollar.
